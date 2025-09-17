@@ -4,4 +4,4 @@ Made in SwiftUI.
 Sreenshots:
 <img width="302" height="622" alt="Screenshot 2025-09-16 at 7 31 45 PM" src="https://github.com/user-attachments/assets/c7287dd2-9024-4cf7-9c6f-1eb8c6de970a" />
 
-<img width="310" height="635" alt="Screenshot 2025-09-16 at 7 32 03 PM" src="https://github.com/user-attachments/assets/3317f9ed-31a2-41cc-bfe5-e129912c8d84" />
+<img width="306" height="627" alt="Screenshot 2025-09-17 at 9 26 23 AM" src="https://github.com/user-attachments/assets/ce402135-1db7-44ff-8d73-7d1ea4852a5a" />
