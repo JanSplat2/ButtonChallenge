@@ -10,19 +10,20 @@ import SwiftUI
 struct ContentView: View {
     @State private var Summarize = 0
     @State private var BlueButton = 0
-    @State private var BlueButtonPressed = false
     @State private var RedButton = 0
-    @State private var RedButtonPressed = false
     @State private var GreenButton = 0
-    @State private var GreenButtonPressed = false
     @State private var UserName = ""
+    @State private var lastButtonPressedColor: Color = .black
     var body: some View {
         VStack {
             Text("Hello, \(UserName)!")
                 .font(.system(size: 40, weight: .bold, design: .rounded))
                 .frame(width: 360, height: 60)
+            
             Text("\(Summarize)")
                 .font(.system(size: 180, weight: .bold, design: .rounded))
+                .foregroundStyle(lastButtonPressedColor)
+            
             TextField("Enter Name", text:  $UserName)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .font(.headline)
@@ -31,7 +32,7 @@ struct ContentView: View {
                 Button {
                     BlueButton += 1
                     Summarize += 1
-                    BlueButtonPressed.toggle()
+                    lastButtonPressedColor = .blue
                 } label: {
                     Circle()
                         .foregroundStyle(.blue)
@@ -44,7 +45,7 @@ struct ContentView: View {
                 Button {
                     GreenButton += 2
                     Summarize += 2
-                    RedButtonPressed.toggle()
+                    lastButtonPressedColor = .green
                 }label: {
                     Circle()
                         .foregroundStyle(.green)
@@ -58,7 +59,7 @@ struct ContentView: View {
                 Button {
                     RedButton += 3
                     Summarize += 3
-                    GreenButtonPressed.toggle()
+                    lastButtonPressedColor = .red
                 }label: {
                     Circle()
                         .foregroundStyle(.red)
